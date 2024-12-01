@@ -1,9 +1,24 @@
-# MentiChat
-Mental Health ChatBot with Transformer Model 
----
+# 	&#128262; MentiChat
+> Mental Health ChatBot with Transformer Model
+
+> **Notes** : Proyek ini masih dalam tahapan pengembangan awal jadi jika ada kesalahan di dalam rekomendasi ataupun respons dari AI kami. Tolong Chat Developer kami untuk perbaikan lebih lanjut.
+
+## &#9749; `Nama Anggota Kelompok`
+> **Abdurrahman Al-atsary** (Sains Data) \
+> **Gede Moena** (Sains Data) \
+> **Wulan Sabina** (Sains Data) \
+> **Putri Olivia Nuraeni** (Sains Data) \
+> **Kiwit Novita Sari** (Sains Data) \
+> **Tarisah** (Sains Data)
 
 
-## Desain Arsitektur Transformer
+## &#10024; **`Latar Belakang`** 
+Kesehatan mental adalah salah satu komponen esensial dari kesejahteraan individu, namun seringkali diabaikan dalam masyarakat. Di Indonesia, isu kesehatan mental masih dipandang sebelah mata, baik karena stigma sosial maupun kurangnya pemahaman masyarakat. Padahal, dampak kesehatan mental yang tidak tertangani dengan baik dapat memengaruhi berbagai aspek kehidupan, termasuk hubungan sosial, produktivitas kerja, hingga kualitas hidup secara keseluruhan.
+
+## &#128204; `Tujuan`
+Membangun sebuah model berbais transformer untuk membuat teman pribadi (*chat assistant*) untuk bisa membangun presepsi yang baik antar user dan bot sehingga kesehatan mental user dapat merasa tentram.  
+
+## &#129302; `Metode : Arsitektur Transformer (Encoder-Decoder)`
 
 ```mermaid
 graph TB
@@ -52,8 +67,23 @@ graph TB
   K -->|Details| Decoder_Block
 ```
 
+## &#127806; Cara Penggunaan (Untuk Pengembangan)
+```sh
+git clone https://github.com/sains-data/MentiChat
+python -r requirements.txt
+```
+Silahkan jika ingin berminat untuk mengembangkan aplikasi dan model ini lebih lanjut..., Salam Developer &#128060;
+
+
+## &#128059; Cara Penggunaan (Untuk User Friendly)
+Kalian dapat mengunjungi link [berikut](https://chat.com) untuk interaksi dengan AI kami secara langsung. Sttt siapa lagi yang bisa kamu chat saat kamu lagi galau...&#128064;
+
+
+## &#128172; FAQ (Frequently Asked Question)
+Jika masih ada pertanyaan reach aja kami salah satu diatas ataupun bisa menghubungi email [Dev-Email](mailto:abdurrahman.121450128@student.itera.ac.id)
+
 
 ---
-**Created by** : Kelompok 21 (Tugas Besar Deep Learning) 
-
+**Project Responsible** : Abdurrahman Al-atsary (rachmanz) \
+**Created by** : Kelompok 21 (Tugas Besar Deep Learning) \
 **TA** : 2024 - 2025 
