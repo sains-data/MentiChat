@@ -18,6 +18,9 @@ Kesehatan mental adalah salah satu komponen esensial dari kesejahteraan individu
 ## &#128204; `Tujuan`
 Membangun sebuah model berbais transformer untuk membuat teman pribadi (*chat assistant*) untuk bisa membangun presepsi yang baik antar user dan bot sehingga kesehatan mental user dapat merasa tentram.  
 
+## &#128194; `Dataset`
+Dataset yang digunakan merupakan dataset yang dikumpulkan dari sumber terbuka (*open source*) yang ada di website Hugging Face dan Google Dataset yang berupa dataset yang terdiri dari 2 Fitur : *Context* (Tanya) dan *Response* (Jawab) tentang kesehatan mental. 
+
 ## &#129302; `Metode : Arsitektur Transformer (Encoder-Decoder)`
 
 ```mermaid
@@ -67,7 +70,18 @@ graph TB
   K -->|Details| Decoder_Block
 ```
 
-## &#127806; Cara Penggunaan (Untuk Pengembangan)
+## `Hasil Evaluasi Model`
+| **Aspek**                       | **Score**                                              |
+|----------------------------------|-------------------------------------------------------|
+|Human Evaluation*| |
+|BLEU Score**| |
+|METEOR Score**| |
+
+> **Notes**: \
+> \* : Butuh Evaluasi beberapa orang dan beberapa skenario prompt untuk mengevaluasi hasilnya \
+> \** : Butuh data dengan aspek besar untuk mengevaluasi perfoma dari model yang dibuat.
+
+## &#127806; `Cara Penggunaan (Untuk Pengembangan)`
 ```sh
 git clone https://github.com/sains-data/MentiChat
 python -r requirements.txt
@@ -75,15 +89,18 @@ python -r requirements.txt
 Silahkan jika ingin berminat untuk mengembangkan aplikasi dan model ini lebih lanjut..., Salam Developer &#128060;
 
 
-## &#128059; Cara Penggunaan (Untuk User Friendly)
+## &#128059; `Cara Penggunaan (Untuk User Friendly)`
 Kalian dapat mengunjungi link [berikut]() untuk interaksi dengan AI kami secara langsung. Sttt siapa lagi yang bisa kamu chat saat kamu lagi galau...&#128064;
 
 
-## &#128172; FAQ (Frequently Asked Question)
+## &#128172; `FAQ (Frequently Asked Question)`
 Jika masih ada pertanyaan reach aja kami salah satu diatas ataupun bisa menghubungi email [Dev-Email](mailto:abdurrahman.121450128@student.itera.ac.id)
+
+## &#128214; `Referensi`
+[1] A. Vaswani, N. Shazeer, N. Parmar, J. Uszkoreit, L. Jones, A. N. Gomez, Ł. Kaiser, and I. Polosukhin, “Attention Is All You Need,” arXiv preprint arXiv:1706.03762, 2023. [Online]. Available: https://arxiv.org/abs/1706.03762
 
 
 ---
-**Project Responsible** : Abdurrahman Al-atsary (rachmanz) \
+**Project Responsible** : Abdurrahman Al-atsary ([rachmanz](https://github.com/rachmanz)) \
 **Created by** : Kelompok 21 (Tugas Besar Deep Learning) \
 **TA** : 2024 - 2025 
