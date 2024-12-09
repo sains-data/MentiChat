@@ -1,8 +1,8 @@
 # 	&#128262; MentiChat
 > Mental Health ChatBot with Transformer Model
 
-## Apps Overview 
-![MentiChat App](../MentiChat/assets/banner_app.png)
+## **`Apps Overview`** 
+![](../MentiChat/assets/banner_app.png)
 
 > **Notes** : Proyek ini masih dalam tahapan pengembangan awal jadi jika ada kesalahan di dalam rekomendasi ataupun respons dari AI kami. Tolong Chat Developer kami untuk perbaikan lebih lanjut.
 
