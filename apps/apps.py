@@ -39,7 +39,12 @@ if "chat_history" not in st.session_state:
     st.session_state["chat_history"] = []
 
 # Chat Interface
-st.title("🧠 MentiChat")
+st.markdown("""
+<div style="background-color:#f0f0f5; padding:10px; border-radius:10px; text-align:center;">
+    <h1 style="color:#336699;">🧠 MentiChat</h1>
+    <p style="color:#666;">Your AI Mental Health Companion</p>
+</div>
+""", unsafe_allow_html=True)  
 
 def get_response_from_huggingface(user_text, model_name, api_key):
     if not api_key:
