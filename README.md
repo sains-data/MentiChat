@@ -1,5 +1,5 @@
 # 	&#128262; MentiChat
-> Mental Health ChatBot with Transformer Model
+> Mental Health ChatBot with Transformer Model (Encoder-Decoder) with API Transport from [Hugging Face]("https://huggingface.co").
 
 ## **`Apps Overview`** 
 ![MentiChat Banner](assets/banner_app.png)
