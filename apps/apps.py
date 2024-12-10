@@ -47,12 +47,15 @@ st.markdown("""
 """, unsafe_allow_html=True)  
 
 def get_response_from_huggingface(user_text, model_name, api_key):
+    # Fungsi try-error ketika API tidak ditemukan
     if not api_key:
         return "⚠️ Error: Hugging Face API key is missing!"
     
+    # End-point dari API Hugging Face (Tolong dilakukan pengecekan secara berkala : sewaktu-waktu berubah)
     API_URL = f"https://api-inference.huggingface.co/models/{model_name}"
-    headers = {"Authorization": f"Bearer {api_key}"}
+    headers = {"Authorization": f"Bearer {api_key}"} # Header Sender File untuk HTTP 1.1 Connection
 
+    # Menyimpan payload yang ada didalam request header 
     payload = {"inputs": user_text, "options":{"wait_for_model":True}}  
 
     try:
@@ -66,36 +69,37 @@ def get_response_from_huggingface(user_text, model_name, api_key):
         else:
             return "Unexpected response format from API. Check the model's expected output."  # More informative error message
 
+    # Fungsi exception untuk request saat terjadi error
     except requests.exceptions.RequestException as e:
         st.error(f"Error connecting to API: {e}")
         return f"Error: {e}"
+    # Fungsi exception saat terjadi hal yang tidak terduga
     except Exception as e:
         st.error(f"An unexpected error occurred: {e}")
         return f"Error: {e}"
 
-# User input with "send" button and icon
-with st.form(key="user_input_form"):  # Use a form to group the input and button
-    col1, col2 = st.columns([9, 1])  # Create two columns for layout
+# User input question form (User mengetikan pertanyaan )
+with st.form(key="user_input_form"):  # Menggunakan from yang di gabungkan dengan input dan button 
+    col1, col2 = st.columns([9, 1])  # Membuat 2 kolom buat layout dari form inputan
 
+    # Kolom pertama (kolom pertanyaan yang akan diajukan)
     with col1:
         user_input = st.text_input(" ", placeholder="What's on your mind today?", key="user_input_text", label_visibility="collapsed")
-
+    # Kolom kedua (kolom untuk menaruh tombol tanda panah)
     with col2:
-        submit_button = st.form_submit_button("➡️") # Use arrow as send button
+        submit_button = st.form_submit_button("➡️") # Menggunakan button untuk mengirim pertanyaan
 
 
-# Handle user input and responses (using the form submit)
+# State menghandle interakasi user dengan bot
 if submit_button and user_input:
-    st.session_state.chat_history.append({"role": "user", "text": user_input})
+    st.session_state.chat_history.append({"role": "user", "text": user_input})  # kolom memasukan user input 
+    ai_response = get_response_from_huggingface(user_input, model_name, HF_API_KEY) # Fungsi pemanggilan respons dari AI dengan API Hugging Face
+    st.session_state.chat_history.append({"role": "bot", "text": ai_response}) # Tampilkan respon dari bot ke user
 
-    ai_response = get_response_from_huggingface(user_input, model_name, HF_API_KEY) # Replace with your API call function
-
-    st.session_state.chat_history.append({"role": "bot", "text": ai_response})
-
-# Display loading animation for AI response
+# Menampilkan loading animation saat menjawab respons
 def show_typing_indicator():
     with st.empty():
-        typing_animation = "..."
+        typing_animation = "..." # Menampilkan animasi ketika bot sedang menjawab
         for _ in range(3):
             st.text(f"Bot is typing{typing_animation}")
             time.sleep(0.5)
@@ -104,19 +108,6 @@ def show_typing_indicator():
             time.sleep(0.5)
             st.text("")
 
-# Handle user input and responses
-if user_input:
-    st.session_state.chat_history.append({"role": "user", "text": user_input})
-
-    # Show typing indicator while fetching response
-    show_typing_indicator()
-
-    # Auto-remove typing indicator after response
-    time.sleep(2)
-
-    ai_response = get_response_from_huggingface(user_input, model_name, HF_API_KEY)
-    st.session_state.chat_history.append({"role": "bot", "text": ai_response})
-
 # Display chat history (reversed, with the latest message at the bottom)
 for i, msg in enumerate(reversed(st.session_state.chat_history)):
     if msg["role"] == "user":
@@ -124,7 +115,7 @@ for i, msg in enumerate(reversed(st.session_state.chat_history)):
     else:
         message(msg["text"], key=f"bot_{i}")
 
-# Footer
+# Footer (DISCLAIMER)
 st.markdown("""
 ---
 *This chatbot is designed to provide general mental health support but is not a substitute for professional advice.*
