@@ -87,7 +87,7 @@ graph TB
 ## &#127806; `Cara Penggunaan (Untuk Pengembangan)`
 ```sh
 git clone https://github.com/sains-data/MentiChat
-python -r requirements.txt
+pip install -r requirements.txt
 ```
 Silahkan jika ingin berminat untuk mengembangkan aplikasi dan model ini lebih lanjut..., Salam Developer &#128060;
 
