@@ -106,5 +106,5 @@ Jika masih ada pertanyaan reach aja kami salah satu diatas ataupun bisa menghubu
 ---
 **Project Responsible** : Abdurrahman Al-atsary ([rachmanz](https://github.com/rachmanz)) \
 **Created by** : Kelompok 21 (Tugas Besar Deep Learning) \
-**Notion** : [projectDL21](https://soapy-risk-c88.notion.site/Kelompok-21-Proyek-Tugas-Besar-Deep-Learning-1338fd7a7e13807a926ed7624252c32e)
+**Notion** : [Project Kelompok 21](https://soapy-risk-c88.notion.site/Kelompok-21-Proyek-Tugas-Besar-Deep-Learning-1338fd7a7e13807a926ed7624252c32e) \
 **TA** : 2024 - 2025 
