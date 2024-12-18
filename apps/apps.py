@@ -75,7 +75,6 @@ else:
     model_name = None
 
 if model_provider == "Google":
-    API_DB = API_DB
     if not API_DB:
         st.sidebar.error("Google API key not found in .env file!")
 
