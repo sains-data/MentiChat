@@ -2,7 +2,7 @@
 > Mental Health ChatBot with Transformer Model (Encoder-Decoder) with API Transport from [Hugging Face]("https://huggingface.co").
 
 ## **`Apps Overview`** 
-![MentiChat Banner](assets/final_banner_apps.png)
+![MentiChat Banner](assets/final_banner_app.png)
 
 > **Notes** : Proyek ini masih dalam tahapan pengembangan awal jadi jika ada kesalahan di dalam rekomendasi ataupun respons dari AI kami. Tolong Chat Developer kami untuk perbaikan lebih lanjut.
 
