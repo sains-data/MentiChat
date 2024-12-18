@@ -9,9 +9,9 @@ import google.generativeai as genai
 
 
 # Deployment API (Streamlit)
-API_DB = st.secrets["API_DB"]["API_DB"]
-API_HF_KEY = st.secrets["API_HF_KEY"]["API_HF_KEY"]
-MODEL_NAME = st.secrets["MODEL_NAME"]["MODEL_NAME"]
+API_DB = st.secrets["API_DB"]
+API_HF_KEY = st.secrets["API_HF_KEY"]
+MODEL_NAME = st.secrets["MODEL_NAME"]
 
 # # Memanggil API dari env file (Local File API Setting)
 # load_dotenv()
