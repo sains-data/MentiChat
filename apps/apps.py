@@ -91,7 +91,7 @@ def get_response(user_text, model_provider, model_name=None, hf_api_key=None):
     if model_provider == "Hugging Face":
         return get_response_from_huggingface(user_text, model_name, hf_api_key)
     elif model_provider == "Google":
-        return get_response_from_databits(user_text)
+        return get_response_from_google(user_text)
     else:
         return "Invalid model provider selected."
 
@@ -118,16 +118,14 @@ def get_response_from_huggingface(user_text, model_name, api_key):
     except Exception as e:
         return f"An unexpected error occurred: {e}"
 
-def get_response_from_databits(user_text):
+def get_response_from_google(user_text):
     if not API_DB:
         return "⚠️ Error: Google API key is missing!"
 
     genai.configure(api_key=API_DB) 
 
     try:
-        # Create an instance of the GenerativeModel class
-        model = genai.GenerativeModel(MODEL_NAME) # PERUBAHAN
-        # Generate content with the provided prompt
+        model = genai.GenerativeModel(MODEL_NAME)
         response = model.generate_content(user_text)
         return response.text
 
@@ -163,7 +161,7 @@ if submit_button and user_input:
     if model_provider == "Hugging Face" and model_name:
         ai_response = get_response_from_huggingface(user_input, model_name, HF_API_KEY)
     elif model_provider == "Google":
-        ai_response = get_response_from_databits(user_input)
+        ai_response = get_response_from_google(user_input)
     else:
         ai_response = "⚠️ Error: Model provider or model not selected!"
 
