@@ -108,7 +108,7 @@ Silahkan jika ingin berminat untuk mengembangkan aplikasi dan model ini lebih la
 
 
 ## &#128059; `Cara Penggunaan (Untuk User Friendly)`
-Kalian dapat mengunjungi link [berikut]() untuk interaksi dengan AI kami secara langsung. Sttt siapa lagi yang bisa kamu chat saat kamu lagi galau...&#128064;
+Kalian dapat mengunjungi link [berikut](https://mentichat.streamlit.app/) untuk interaksi dengan AI kami secara langsung. Sttt siapa lagi yang bisa kamu chat saat kamu lagi galau...&#128064;
 
 
 ## &#128172; `FAQ (Frequently Asked Question)`
