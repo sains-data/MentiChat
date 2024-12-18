@@ -86,9 +86,24 @@ graph TB
 
 ## &#127806; `Cara Penggunaan (Untuk Pengembangan)`
 ```sh
+# Clone Github ini
 git clone https://github.com/sains-data/MentiChat
+
+# Buatlah sebuah environment python (Jika sudah memakai anaconda langsung install requirement yaa..)
+pip install virtualenv
+python -m venv venv
+
+# Hidupkan environment python Anda
+source venv/bin/activate # Linux and MacOS
+.\venv\Scripts\activate  # Windows
+
+# Install keseluruhan library yang dibutuhkan dalam pengembangan aplikasi ini 
 pip install -r requirements.txt
+
+# (Opsional) Silahkan buat model yang anda suka dan setting API model didalam file .env file ya
 ```
+
+
 Silahkan jika ingin berminat untuk mengembangkan aplikasi dan model ini lebih lanjut..., Salam Developer &#128060;
 
 
