@@ -76,9 +76,9 @@ graph TB
 ## `Hasil Evaluasi Model`
 | **Aspek**                       | **Score**                                              |
 |----------------------------------|-------------------------------------------------------|
-|Human Evaluation*| |
-|BLEU Score**| |
-|METEOR Score**| |
+|Human Evaluation*| 70%|
+|BLEU Score**| 72.341%|
+|METEOR Score**| 96%|
 
 > **Notes**: \
 > \* : Butuh Evaluasi beberapa orang dan beberapa skenario prompt untuk mengevaluasi hasilnya \
