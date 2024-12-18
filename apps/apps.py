@@ -8,11 +8,16 @@ from dotenv import load_dotenv
 import google.generativeai as genai
 
 
-# Memanggil API rahasia dari env file
-load_dotenv()
-API_DB = os.getenv("API_DB")
-API_HF_KEY =  os.getenv("API_HF_KEY")
-MODEL_NAME = os.getenv("MODEL_NAME")
+# Deployment API (Streamlit)
+API_DB = st.secrets["API_DB"]
+API_HF_KEY = st.secrets["API_HF_KEY"]
+MODEL_NAME = st.secrets["MODEL_NAME"]
+
+# # Memanggil API dari env file (Local File API Setting)
+# load_dotenv()
+# API_DB = os.getenv("API_DB")
+# API_HF_KEY =  os.getenv("API_HF_KEY")
+# MODEL_NAME = os.getenv("MODEL_NAME")
 
 # Fungsi Reset Chat (General) 
 def reset_chat_history():
