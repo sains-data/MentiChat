@@ -9,15 +9,15 @@ import google.generativeai as genai
 
 
 # Deployment API (Streamlit)
-API_DB = st.secrets["API_KEY"]["API_DB"]
-API_HF_KEY = st.secrets["API_KEY"]["API_HF_KEY"]
-MODEL_NAME = st.secrets["API_KEY"]["MODEL_NAME"]
+# API_DB = st.secrets["API_KEY"]["API_DB"]
+# API_HF_KEY = st.secrets["API_KEY"]["API_HF_KEY"]
+# MODEL_NAME = st.secrets["API_KEY"]["MODEL_NAME"]
 
 # # Memanggil API dari env file (Local File API Setting)
-# load_dotenv()
-# API_DB = os.getenv("API_DB")
-# API_HF_KEY =  os.getenv("API_HF_KEY")
-# MODEL_NAME = os.getenv("MODEL_NAME")
+load_dotenv()
+API_DB = os.getenv("API_DB")
+API_HF_KEY =  os.getenv("API_HF_KEY")
+MODEL_NAME = os.getenv("MODEL_NAME")
 
 # Fungsi Reset Chat (General) 
 def reset_chat_history():
@@ -67,7 +67,7 @@ model_provider = st.sidebar.selectbox(
 if model_provider == "Hugging Face":
     model_name = st.sidebar.selectbox(
         "Choose a Hugging Face model:",
-        ["numind/NuExtract-1.5", "facebook/blenderbot-400M-distill", "microsoft/Phi-3.5-mini-instruct"],
+        ["ChitChatCoder/basic_transformer", "facebook/blenderbot-400M-distill"],
         key="huggingface_model_selectbox"
     )
     HF_API_KEY = API_HF_KEY
