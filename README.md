@@ -116,7 +116,8 @@ Jika masih ada pertanyaan reach aja kami salah satu diatas ataupun bisa menghubu
 
 ## &#128214; `Referensi`
 [1] A. Vaswani, N. Shazeer, N. Parmar, J. Uszkoreit, L. Jones, A. N. Gomez, Ł. Kaiser, and I. Polosukhin, “Attention Is All You Need,” arXiv preprint arXiv:1706.03762, 2023. [Online]. Available: https://arxiv.org/abs/1706.03762
-
+[2] N. Esfandiari, K. Kiani, and R. Rastgoo, “A Conditional Generative Chatbot using Transformer Model,” arXiv preprint, 2023. [Online]. Available: https://arxiv.org/abs/2306.02074.
+[3] Y. Zhang, "Utilizing Transformers for Interactive Chatbot Development", 2024 [Online]. Available: https://thesciencebrigade.com/jcir/article/download/288/277/601 
 
 ---
 **Project Responsible** : Abdurrahman Al-atsary ([rachmanz](https://github.com/rachmanz)) \
